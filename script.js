@@ -16,10 +16,17 @@ const calculateMonthlyPayment = (event) => {
     const amtOwed = document.getElementById("owedInput").value; // Corrected variable name
 
     const monthlyPayment =
-        ((price - tradeIn - cashRebate - downPayment - amtOwed) *
-            (1 + interest / 100)) /
+        (price -
+            tradeIn -
+            cashRebate -
+            downPayment +
+            amtOwed * (1 + interest / 100)) /
         months;
 
+    if (isNaN(monthlyPayment)) {
+        alert("Fill in all the fields!");
+        return;
+    }
     document.getElementById("calculatePayment").textContent =
         "$" + monthlyPayment.toFixed(2);
 };

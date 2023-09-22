@@ -1,18 +1,48 @@
 #form {
-    /*center form*/
-
-    width: 25em; /* Adjust the width as needed */
+    width: 25em;
     margin: 0 auto;
     text-align: left;
 }
 
+#form label {
+    display: inline-block;
+    text-align: right;
+    width: 45%;
+    margin-right: 10px;
+}
+
+#form input[type="number"] {
+    width: 45%;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 #calculatePayment {
-    /*center button*/
-    width: 300px; /* Adjust the width as needed */
+    width: 300px;
     margin: 0 auto;
     text-align: center;
 }
 
 body {
     background-color: #4c824a;
+}
+
+#output {
+    border: 1px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px !important;
+}
+
+.buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.buttons input[type="submit"] {
+    margin-right: 10px;
 }

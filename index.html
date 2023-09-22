@@ -5,13 +5,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="./styles.css" rel="stylesheet" />
+        <link href="https://fonts.cdnfonts.com/css/aaargh" rel="stylesheet" />
     </head>
     <body>
         <script src="script.js"></script>
         <h1 style="text-align: center">Auto Loan Calculator</h1>
         <form id="form">
             <hr />
-            <label for="purchasePrice">Purchase Price</label>
+            <label for="purchaseInput">Purchase Price</label>
             <input
                 type="number"
                 name="purchasePrice"
@@ -20,7 +21,7 @@
                 id="purchaseInput"
             />
             <br />
-            <label for="cashRebate">Cash Rebate: </label>
+            <label for="cashInput">Cash Rebate: </label>
             <input
                 type="number"
                 name="cashRebate"
@@ -28,8 +29,8 @@
                 placeholder="enter cash rebate"
                 id="cashInput"
             />
-            <br />
-            <label for="tradeIn">Trade in: </label>
+
+            <label for="tradeInput">Trade in: </label>
             <input
                 type="number"
                 name="tradeIn"
@@ -37,8 +38,7 @@
                 placeholder="enter trade in value"
                 id="tradeInput"
             />
-            <br />
-            <label for="owedOnTrade">Amount Owed on Trade: </label>
+            <label for="owedInput">Amount Owed on Trade: </label>
             <input
                 type="number"
                 name="owedOnTrade"
@@ -46,8 +46,7 @@
                 id="owedInput"
                 placeholder="amt owed"
             />
-            <br />
-            <label for="Down Payment">Down Payment: </label>
+            <label for="paymentInput">Down Payment: </label>
             <input
                 type="number"
                 name="downPayment"
@@ -55,8 +54,8 @@
                 placeholder="Down payment"
                 id="paymentInput"
             />
-            <br />
-            <label for="interestRate">Interest Rate: </label>
+
+            <label for="interestInput">Interest Rate: </label>
             <input
                 type="number"
                 name="interestRate"
@@ -64,8 +63,8 @@
                 placeholder="interest rate"
                 id="interestInput"
             />
-            <br />
-            <label for="termMonths">Loan amount (months): </label>
+
+            <label for="monthInput">Loan amount (months): </label>
             <input
                 type="number"
                 name="termMonths"
@@ -89,7 +88,9 @@
                     onclick="calculateMonthlyPayment(event)"
                 />
             </div>
+            <p id="output">
+                Monthly payment: <span id="calculatePayment"></span>
+            </p>
         </form>
-        <p>Monthly payment: <span id="calculatePayment"></span></p>
     </body>
 </html>
