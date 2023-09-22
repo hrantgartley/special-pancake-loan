@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="./styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <h1 style="text-align: center">Auto Loan Calculator</h1>
+        <form id="form">
+            <hr />
+            <label for="purchasePrice">Purchase Price</label>
+            <input
+                type="number"
+                name="purchasePrice"
+                value=""
+                placeholder="enter price"
+                id="purchaseInput"
+            />
+            <br />
+            <label for="cashRebate">Cash Rebate: </label>
+            <input
+                type="number"
+                name="cashRebate"
+                value=""
+                placeholder="enter cash rebate"
+                id="cashInput"
+            />
+            <br />
+            <label for="tradeIn">Trade in: </label>
+            <input
+                type="number"
+                name="tradeIn"
+                value=""
+                placeholder="enter trade in value"
+                id="tradeInput"
+            />
+            <br />
+            <label for="owedOnTrade">Amount Owed on Trade: </label>
+            <input
+                type="number"
+                name="owedOnTrade"
+                value=""
+                id="owedInput"
+                placeholder="amt owed"
+            />
+            <br />
+            <label for="Down Payment">Down Payment: </label>
+            <input
+                type="number"
+                name="downPayment"
+                value=""
+                placeholder="Down payment"
+                id="paymentInput"
+            />
+            <br />
+            <label for="interestRate">Interest Rate: </label>
+            <input
+                type="number"
+                name="interestRate"
+                value=""
+                placeholder="interest rate"
+                id="interestInput"
+            />
+            <br />
+            <label for="termMonths">Loan amount (months): </label>
+            <input
+                type="number"
+                name="termMonths"
+                value=""
+                placeholder="loan in months"
+                id="monthInput"
+            />
+            <hr />
+            <div class="buttons">
+                <input
+                    type="submit"
+                    name="submit"
+                    value="Clear"
+                    id="clearButton"
+                    onclick="clearForm()"
+                />
+                <input
+                    type="submit"
+                    name="submit"
+                    value="Calculate"
+                    onclick="calculateMonthlyPayment(event)"
+                />
+            </div>
+        </form>
+        <p>Monthly payment: <span id="calculatePayment"></span></p>
+    </body>
+</html>

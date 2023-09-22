@@ -1,0 +1,18 @@
+#form {
+    /*center form*/
+
+    width: 25em; /* Adjust the width as needed */
+    margin: 0 auto;
+    text-align: left;
+}
+
+#calculatePayment {
+    /*center button*/
+    width: 300px; /* Adjust the width as needed */
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    background-color: #4c824a;
+}
