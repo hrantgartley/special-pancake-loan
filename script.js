@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 const clearForm = () => {
     const form = document.querySelector("form");
-    form.reset(); // Corrected function name to reset the form
+    form.reset();
 };
 
 // eslint-disable-next-line no-unused-vars
@@ -13,7 +13,7 @@ const calculateMonthlyPayment = (event) => {
     const tradeIn = document.getElementById("tradeInput").value;
     const cashRebate = document.getElementById("cashInput").value;
     const downPayment = document.getElementById("paymentInput").value;
-    const amtOwed = document.getElementById("owedInput").value; // Corrected variable name
+    const amtOwed = document.getElementById("owedInput").value;
 
     const monthlyPayment =
         (price -

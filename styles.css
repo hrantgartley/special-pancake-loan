@@ -15,12 +15,6 @@
     width: 45%;
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 #calculatePayment {
     width: 300px;
     margin: 0 auto;
