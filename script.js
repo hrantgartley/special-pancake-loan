@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-const clearForm = () => {
-    const form = document.querySelector("form");
-    form.reset();
+const clearOutput = () => {
+    const output = document.getElementById("calculatePayment");
+    output.innerHTML = "";
 };
 
 // eslint-disable-next-line no-unused-vars
@@ -26,7 +26,18 @@ const calculateMonthlyPayment = (event) => {
     if (isNaN(monthlyPayment)) {
         alert("Fill in all the fields!");
         return;
+    } else if (monthlyPayment === Infinity) {
+        console.log(monthlyPayment);
+        return;
+    } else if (monthlyPayment < 0) {
+        alert("Fill in all the fields!");
+        return;
     }
+
     document.getElementById("calculatePayment").textContent =
-        "$" + monthlyPayment.toFixed(2);
+        "Monthly Car Payment = " +
+        "$" +
+        monthlyPayment.toFixed(2) +
+        " " +
+        "per month";
 };
