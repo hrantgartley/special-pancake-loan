@@ -14,7 +14,6 @@ const calculateMonthlyPayment = (event) => {
     const cashRebate = document.getElementById("cashInput").value;
     const downPayment = document.getElementById("paymentInput").value;
     const amtOwed = document.getElementById("owedInput").value;
-
     const monthlyPayment =
         (price -
             tradeIn -
@@ -27,17 +26,17 @@ const calculateMonthlyPayment = (event) => {
         alert("Fill in all the fields!");
         return;
     } else if (monthlyPayment === Infinity) {
-        console.log(monthlyPayment);
+        alert("Fill in all the fields!");
         return;
     } else if (monthlyPayment < 0) {
         alert("Fill in all the fields!");
         return;
+    } else {
+        document.getElementById("calculatePayment").textContent =
+            "Monthly Car Payment = " +
+            "$" +
+            monthlyPayment.toFixed(2) +
+            " " +
+            "per month";
     }
-
-    document.getElementById("calculatePayment").textContent =
-        "Monthly Car Payment = " +
-        "$" +
-        monthlyPayment.toFixed(2) +
-        " " +
-        "per month";
 };
