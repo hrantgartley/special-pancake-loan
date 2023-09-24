@@ -26,6 +26,7 @@ const calculateMonthlyPayment = (event) => {
         alert("Fill in all the fields!");
         return;
     } else if (monthlyPayment === Infinity) {
+        console.log(monthlyPayment);
         alert("Fill in all the fields!");
         return;
     } else if (monthlyPayment < 0) {
